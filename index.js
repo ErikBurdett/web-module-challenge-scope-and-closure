@@ -90,7 +90,7 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-
+// not passing - will have to retake and fix this
 function finalScore(inningInit, number){
   let inningObj1 = inningInit * number;
   let inningObj2 = inningInit * number;
