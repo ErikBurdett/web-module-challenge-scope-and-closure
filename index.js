@@ -28,11 +28,13 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+  Counter 1 assigns counterMaker() to a new constant Counter1 outside of the function counterMaker()/
   
   2. Which of the two uses a closure? How can you tell?
-  
+  Counter 1 uses a closure. The reassigning of counterMaker() outside of it's self.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     Calling outside of the function will be more useful for counter1 whereas counter2 is more useful if you are only trying to call the counter2() function. 
 */
 
 // counter1 code
@@ -62,16 +64,24 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+  const score = Math.floor(Math.random() * 3);
+  return score;
+  
 }
+let inningInit = inning();
+
+
+console.log(inningInit);
+
+
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
-  1. Receive the callback function `inning` that was created in Task 2 
-  2. Receive a number of innings to be played
-  3. After each inning, update the score of the home and away teams
+  1. Receive the callback function `inning` that was created in Task 2 inningInit*
+  2. Receive a number of innings to be played *number
+  3. After each inning, update the score of the home and away teams 
   4. After the last inning, return an object containing the final (total) score of the innings played
   
   For example: invoking finalScore(inning, 9) might return this object:
@@ -81,9 +91,16 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inningInit, number){
+  let inningObj1 = inningInit * number;
+  let inningObj2 = inningInit * number;
+  let home = {"Home":inningObj1};
+  let away = {"Away":inningObj2};
+  console.log(home);
+
+  console.log(away);
 }
+console.log(finalScore(inningInit, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
