@@ -19,7 +19,7 @@ In this challenge you will be working to build a `scoreboard` (in the console) t
 
 A scoreboard in a major league stadium looks something like this. In fact, the scoreboard at Fenway Park in Boston is actually quite famous. 
 
-![Fenway Scoreboard](https://storage.googleapis.com/afs-prod/media/media:e959506330fd4e5890023c93cfbaac55/800.jpeg)
+![Fenway Scoreboard](https://storage.google6apis.com/afs-prod/media/media:e959506330fd4e5890023c93cfbaac55/800.jpeg)
 
 There are layers upon layers of nested functions within the game of baseball. Your challenge today will be to work through tasks associated with these layers, and ultimately to produce a scoreboard that logs in the console.
 
@@ -43,6 +43,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is a function bundled (or enclosed) with refrences to it's surrounding state - a way to make local variables within a function exist outside, or in refrence to, that variable's function.  
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +65,12 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+lines 58 & 60. They assign the function outside of of the function to new variables then use that variable to call the function. 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The number is random  - you could also call zoesRoll() to compare the two.
 c. What is the lexical scope of `newRoll`? 
+local to function() and PersonalDice(name6)
 
 
 ### Task 3 - Stretch Goals
